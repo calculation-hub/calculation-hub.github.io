@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Finance & Mortgage Calculator</title>
+    <style>
+        :root { --primary: #2ecc71; --dark: #2c3e50; --light: #f8f9fa; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--light); color: var(--dark); margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab-btn { flex: 1; padding: 12px; border: none; background: #e0e0e0; cursor: pointer; font-weight: bold; border-radius: 6px; transition: 0.3s; }
+        .tab-btn.active { background: var(--primary); color: white; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; }
+        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        button.calc-btn { width: 100%; padding: 12px; background: var(--dark); color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
+        .result { margin-top: 20px; padding: 15px; background: #e8f8f0; border-left: 5px solid var(--primary); border-radius: 4px; font-size: 18px; font-weight: bold; }
+        .ad-slot { margin: 25px 0; padding: 20px; background: #ebebeb; border: 2px dashed #bbb; text-align: center; color: #777; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📈 Wealth & Finance Calculator Hub</h2>
+    
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('interest')">Compound Interest</button>
+        <button class="tab-btn" onclick="switchTab('mortgage')">Mortgage Payment</button>
+    </div>
+
+    <!-- COMPOUND INTEREST -->
+    <div id="interest" class="tab-content active">
+        <div class="input-group"><label>Principal Amount ($)</label><input type="number" id="p-amount" value="5000"></div>
+        <div class="input-group"><label>Annual Interest Rate (%)</label><input type="number" id="p-rate" value="7" step="0.1"></div>
+        <div class="input-group"><label>Time Period (Years)</label><input type="number" id="p-years" value="10"></div>
+        <button class="calc-btn" onclick="calcInterest()">Calculate Future Value</button>
+        <div id="interest-res" class="result">Future Balance: $9,835.76</div>
+    </div>
+
+    <!-- AD SLOT POSITION 1 (Keeps users viewing ads while shifting tabs) -->
+    <div class="ad-slot">
+        <!-- REPLACE THIS WITH YOUR ADSENSE / EZOIC CODE -->
+        <p>ADVERTISEMENT SLOT (Responsive Banner)</p>
+    </div>
+
+    <!-- MORTGAGE CALCULATOR -->
+    <div id="mortgage" class="tab-content">
+        <div class="input-group"><label>Home Price ($)</label><input type="number" id="m-price" value="300000"></div>
+        <div class="input-group"><label>Down Payment ($)</label><input type="number" id="m-down" value="60000"></div>
+        <div class="input-group"><label>Interest Rate (%)</label><input type="number" id="m-rate" value="5" step="0.1"></div>
+        <div class="input-group"><label>Loan Term (Years)</label><input type="number" id="m-years" value="30"></div>
+        <button class="calc-btn" onclick="calcMortgage()">Calculate Monthly Payment</button>
+        <div id="mortgage-res" class="result">Monthly Payment: $1,288.37</div>
+    </div>
+</div>
+
+<script>
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.target.classList.add('active');
+    }
+    function calcInterest() {
+        let p = parseFloat(document.getElementById('p-amount').value);
+        let r = parseFloat(document.getElementById('p-rate').value) / 100;
+        let t = parseFloat(document.getElementById('p-years').value);
+        let a = p * Math.pow((1 + r), t);
+        document.getElementById('interest-res').innerText = `Future Balance: $${a.toFixed(2)}`;
+    }
+    function calcMortgage() {
+        let p = parseFloat(document.getElementById('m-price').value) - parseFloat(document.getElementById('m-down').value);
+        let r = (parseFloat(document.getElementById('m-rate').value) / 100) / 12;
+        let n = parseFloat(document.getElementById('m-years').value) * 12;
+        let m = p * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        document.getElementById('mortgage-res').innerText = `Monthly Payment: $${m.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>
