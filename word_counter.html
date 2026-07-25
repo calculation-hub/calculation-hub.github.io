@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Text Analyzer & Formatting Tool</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1607159692390166"
+     crossorigin="anonymous"></script>
     <style>
-        body { font-family: system-ui, sans-serif; background: #f3f4f6; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .wrapper { width: 100%; max-width: 750px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        :root { --primary: #4f46e5; --dark: #1f2937; --light: #f3f4f6; }
+        body { font-family: system-ui, sans-serif; background: var(--light); padding: 0; margin: 0; color: #111827; }
+        .site-header { background: var(--dark); color: white; padding: 16px 20px; position: sticky; top: 0; z-index: 20; }
+        .site-header .header-top { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .site-header .title { margin: 0; font-size: 18px; font-weight: 700; }
+        .site-header .subtitle { margin: 4px 0 0; font-size: 13px; color: #d1d5db; }
+        .site-header nav { display: flex; gap: 10px; flex-wrap: wrap; }
+        .site-header nav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.1); }
+        .site-header nav a.active { background: rgba(255,255,255,0.2); }
+        .wrapper { width: 100%; max-width: 750px; margin: 24px auto 32px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         textarea { width: 100%; height: 180px; padding: 12px; border: 2px solid #e2e8f0; border-radius: 6px; resize: vertical; box-sizing: border-box; font-size: 16px; }
         .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
         .stat-box { background: #eff6ff; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold; color: #1e40af; }
         .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
-        .btn { padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500; background: #4f46e5; color: white; }
+        .btn { padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500; background: var(--primary); color: white; }
         .btn-danger { background: #ef4444; }
         .ad-banner { width: 100%; height: 90px; background: #f9fafb; border: 1px solid #d1d5db; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 11px; margin-top: 15px; }
+        .site-footer { background: #111827; color: #d1d5db; text-align: center; padding: 16px 20px; font-size: 14px; }
+        .site-footer a { color: #8be5a2; text-decoration: none; margin: 0 8px; }
+        @media (max-width: 720px) {
+            .wrapper { margin: 16px auto 24px; border-radius: 0; box-shadow: none; }
+            .site-header .header-top { flex-direction: column; align-items: flex-start; }
+        }
     </style>
 </head>
 <body>
+<header class="site-header">
+    <div class="header-top">
+        <div>
+            <p class="title">Calculation Hub</p>
+            <p class="subtitle">Quick tools for everyday writing and finance</p>
+        </div>
+        <nav>
+            <a href="index.html">Finance Calculator</a>
+            <a href="word_counter.html" class="active">Word Counter</a>
+        </nav>
+    </div>
+</header>
 
 <div class="wrapper">
     <h2>📝 Smart Text Formatting Tool</h2>
@@ -60,5 +88,14 @@
         updateStats();
     }
 </script>
+</div>
+
+<footer class="site-footer">
+    Built for fast everyday use — browse more tools at Calculation Hub.
+    <div>
+        <a href="index.html">Finance Calculator</a>
+        <a href="word_counter.html">Word Counter</a>
+    </div>
+</footer>
 </body>
 </html>
