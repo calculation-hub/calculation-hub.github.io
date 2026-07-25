@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Text Analyzer & Formatting Tool</title>
+    <title>Free Word Counter, Character Counter & Text Formatter</title>
+    <meta name="description" content="Use our free online word counter and character counter to check text length, count words, and format content quickly for essays, blogs, and social posts.">
+    <meta name="keywords" content="word counter, character counter, text formatter, online word count tool, word count checker">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://calculation-hub.github.io/word_counter.html">
+    <meta property="og:title" content="Free Word Counter, Character Counter & Text Formatter">
+    <meta property="og:description" content="A simple online tool for counting words, characters, and paragraphs while formatting text.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculation-hub.github.io/word_counter.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Word Counter, Character Counter & Text Formatter">
+    <meta name="twitter:description" content="A simple online tool for counting words, characters, and paragraphs while formatting text.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Calculation Hub Word Counter",
+      "url": "https://calculation-hub.github.io/word_counter.html",
+      "description": "A free online word counter, character counter, and text formatter for writers and students."
+    }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHD0YSS1PD"></script>
     <script>
@@ -25,6 +45,9 @@
         .site-header nav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.1); }
         .site-header nav a.active { background: rgba(255,255,255,0.2); }
         .wrapper { width: 100%; max-width: 750px; margin: 24px auto 32px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 0.95rem; color: #64748b; }
+        .breadcrumbs a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .breadcrumbs .sep { color: #94a3b8; }
         textarea { width: 100%; height: 180px; padding: 12px; border: 2px solid #e2e8f0; border-radius: 6px; resize: vertical; box-sizing: border-box; font-size: 16px; }
         .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
         .stat-box { background: #eff6ff; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold; color: #1e40af; }
@@ -34,6 +57,10 @@
         .ad-banner { width: 100%; height: 90px; background: #f9fafb; border: 1px solid #d1d5db; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 11px; margin-top: 15px; }
         .site-footer { background: #111827; color: #d1d5db; text-align: center; padding: 16px 20px; font-size: 14px; }
         .site-footer a { color: #8be5a2; text-decoration: none; margin: 0 8px; }
+        .seo-content { margin-top: 20px; padding-top: 16px; border-top: 1px solid #e5e7eb; }
+        .seo-content h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--dark); }
+        .seo-content p, .seo-content li { line-height: 1.7; color: #4b5563; }
+        .seo-content ul { margin: 0; padding-left: 20px; }
         @media (max-width: 720px) {
             .wrapper { margin: 16px auto 24px; border-radius: 0; box-shadow: none; }
             .site-header .header-top { flex-direction: column; align-items: flex-start; }
@@ -55,7 +82,13 @@
 </header>
 
 <div class="wrapper">
-    <h2>📝 Smart Text Formatting Tool</h2>
+    <div class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span>Word Counter</span>
+    </div>
+    <h1>📝 Free Online Word Counter and Text Formatter</h1>
+    <p>Count words, characters, and paragraphs instantly for essays, blog posts, product descriptions, and social media captions. This tool also helps you quickly clean up spacing and change text case without leaving the page.</p>
     <textarea id="text-input" placeholder="Type or paste your content here to format..." oninput="updateStats()"></textarea>
     
     <div class="stats-grid">
@@ -83,6 +116,19 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+
+    <section class="seo-content" aria-label="Text tool benefits">
+        <h3>Why writers use this tool</h3>
+        <p>From students checking essay length to marketers preparing social posts, this word count checker helps you keep content within limits and format it faster.</p>
+        <h2>Use this word count checker for</h2>
+        <p>Whether you need a character counter for social posts, a word counter for school assignments, or a text formatter for quick cleanup, this page gives you fast answers without extra sign-up.</p>
+        <ul>
+            <li>Count words and characters in real time as you type.</li>
+            <li>Format content with uppercase, lowercase, and space-cleaning actions.</li>
+            <li>Use it for articles, captions, emails, and academic writing.</li>
+            <li>Check exact word count and character count in real time.</li>
+        </ul>
+    </section>
 </div>
 
 <script>

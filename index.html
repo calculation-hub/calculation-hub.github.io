@@ -3,107 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Finance & Mortgage Calculator</title>
-    <!-- Google tag (gtag.js) -->
+    <title>Free Online Simple Calculator and Scientific Calculator</title>
+    <meta name="description" content="Use our free online simple calculator and scientific calculator for everyday math, percentages, powers, square roots, and more.">
+    <meta name="keywords" content="simple calculator, scientific calculator, online calculator, math calculator, percentage calculator">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://calculation-hub.github.io/index.html">
+    <meta property="og:title" content="Free Online Simple Calculator and Scientific Calculator">
+    <meta property="og:description" content="A fast, mobile-friendly home for simple and scientific calculators.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calculation-hub.github.io/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Simple Calculator and Scientific Calculator">
+    <meta name="twitter:description" content="A fast, mobile-friendly home for simple and scientific calculators.">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Calculation Hub",
+      "url": "https://calculation-hub.github.io/",
+      "description": "Free online simple calculator, scientific calculator, finance tools, and word tools."
+    }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHD0YSS1PD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag(){dataLayer.push(arguments);} 
         gtag('js', new Date());
         gtag('config', 'G-XHD0YSS1PD');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1607159692390166"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1607159692390166" crossorigin="anonymous"></script>
     <style>
-        :root { --primary: #2ecc71; --dark: #2c3e50; --light: #f8f9fa; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--light); color: var(--dark); margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: 24px auto 32px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
-        .tab-btn { flex: 1; padding: 12px; border: none; background: #e0e0e0; cursor: pointer; font-weight: bold; border-radius: 6px; transition: 0.3s; }
-        .tab-btn.active { background: var(--primary); color: white; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        .input-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: 600; }
-        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
-        button.calc-btn { width: 100%; padding: 12px; background: var(--dark); color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
-        .result { margin-top: 20px; padding: 15px; background: #e8f8f0; border-left: 5px solid var(--primary); border-radius: 4px; font-size: 18px; font-weight: bold; }
-        .ad-slot { margin: 25px 0; padding: 20px; background: #ebebeb; border: 2px dashed #bbb; text-align: center; color: #777; font-size: 12px; }
-        .site-header,
-        .site-footer { display: block; }
+        :root { --primary: #2563eb; --accent: #10b981; --dark: #111827; --light: #f8fafc; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #eef2ff, #f8fafc); color: var(--dark); margin: 0; padding: 0; }
         .site-header { background: var(--dark); color: white; padding: 16px 20px; position: sticky; top: 0; z-index: 20; }
-        .site-header .header-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; position: relative; }
-        .site-header .title { margin: 0; font-size: 18px; }
-        .site-header .subtitle { margin: 6px 0 0; font-size: 13px; color: #d1d5db; }
-        .site-header .nav-toggle { display: none; background: transparent; border: 1px solid rgba(255,255,255,0.4); border-radius: 8px; color: white; width: 42px; height: 42px; font-size: 20px; cursor: pointer; }
-        .site-header .nav-menu { display: none; margin-top: 12px; gap: 10px; flex-direction: column; }
-        .site-header.expanded .nav-menu { display: flex; }
-        .header-actions { display: flex; align-items: center; gap: 10px; }
-        .category-toggle { position: relative; background: transparent; border: 1px solid rgba(255,255,255,0.4); border-radius: 8px; width: 34px; height: 34px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
-        .category-toggle span,
-        .category-toggle::before,
-        .category-toggle::after {
-            content: "";
-            position: absolute;
-            width: 16px;
-            height: 2px;
-            background: #d1d5db;
-            border-radius: 1px;
-        }
-        .category-toggle span { top: 50%; transform: translateY(-50%); }
-        .category-toggle::before { top: 10px; }
-        .category-toggle::after { bottom: 10px; }
-        .category-toggle.open span,
-        .category-toggle.open::before,
-        .category-toggle.open::after { background: #8be5a2; }
-        .category-menu {
-            position: absolute;
-            top: calc(100% + 10px);
-            right: 0;
-            width: min(260px, calc(100vw - 40px));
-            background: rgba(44, 62, 80, 0.98);
-            border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 12px;
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transform: translateY(-10px);
-            transition: opacity 0.2s ease, max-height 0.25s ease, transform 0.2s ease;
-            z-index: 30;
-        }
-        .category-menu.expanded {
-            opacity: 1;
-            max-height: 240px;
-            transform: translateY(0);
-        }
-        .category-btn { border: 1px solid rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); color: white; border-radius: 10px; padding: 10px 14px; font-size: 13px; cursor: pointer; }
-        .category-btn.active { background: rgba(255,255,255,0.14); }
-        .nav-link { display: block; width: 100%; padding: 12px; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; background: rgba(255,255,255,0.05); color: white; text-align: left; font-weight: 600; cursor: pointer; }
-        .nav-link.active { background: rgba(255,255,255,0.16); }
-        .site-footer { background: var(--dark); color: #d1d5db; padding: 16px 20px; text-align: center; font-size: 14px; }
-        .site-footer a { color: #8be5a2; text-decoration: none; }
-        .footer-links { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-
+        .site-header .header-top { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .site-header .title { margin: 0; font-size: 18px; font-weight: 700; }
+        .site-header .subtitle { margin: 4px 0 0; font-size: 13px; color: #cbd5e1; }
+        .site-header nav { display: flex; gap: 10px; flex-wrap: wrap; }
+        .site-header nav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.12); }
+        .container { max-width: 1100px; margin: 24px auto 32px; padding: 20px; }
+        .hero { background: white; border-radius: 18px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08); }
+        .hero h1 { margin-top: 0; font-size: 2rem; color: var(--dark); }
+        .hero p { color: #475569; line-height: 1.7; }
+        .breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; font-size: 0.95rem; color: #64748b; }
+        .breadcrumbs a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        .breadcrumbs .sep { color: #94a3b8; }
+        .calculator-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 12px; }
+        .calc-tab { border: none; padding: 10px 14px; border-radius: 999px; background: #e2e8f0; color: var(--dark); cursor: pointer; font-weight: 600; }
+        .calc-tab.active { background: var(--primary); color: white; }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        .card { background: #fff; border-radius: 16px; padding: 18px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+        .card h2 { margin-top: 0; font-size: 1.15rem; }
+        .display { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 1.25rem; margin-bottom: 10px; text-align: right; }
+        .buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .btn { border: none; padding: 12px; border-radius: 8px; font-size: 1rem; cursor: pointer; background: #e2e8f0; color: var(--dark); }
+        .btn.operator { background: var(--primary); color: white; }
+        .btn.equal { background: var(--accent); color: white; }
+        .btn.clear { background: #f59e0b; color: white; }
+        .scientific-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 10px; }
+        .link-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .link-row a { text-decoration: none; color: var(--primary); font-weight: 600; }
+        .ad-slot { margin-top: 18px; padding: 16px; background: #f1f5f9; border: 1px dashed #94a3b8; text-align: center; color: #64748b; }
+        .site-footer { background: var(--dark); color: #cbd5e1; padding: 16px 20px; text-align: center; font-size: 14px; }
+        .site-footer a { color: #34d399; text-decoration: none; margin: 0 8px; }
         @media (max-width: 720px) {
-            body { padding: 0; }
-            .site-header,
-            .site-footer { display: block; }
-            .site-header { padding-bottom: 12px; }
-            .site-header .header-top { width: 100%; }
-            .site-header .header-right { width: 100%; justify-content: flex-end; flex-direction: column; align-items: flex-end; margin-left: 0; }
-            .header-actions { margin-left: auto; }
-            .site-header .nav-menu { display: none; flex-direction: column; }
-            .site-header.expanded .nav-menu { display: flex; }
-            .container { margin: 0; border-radius: 0; min-height: calc(100vh - 172px); box-shadow: none; }
-            .container { padding: 20px; }
-            .tabs { flex-direction: column; }
-            .tab-btn { width: 100%; }
-            .nav-toggle { display: inline-flex; justify-content: center; align-items: center; }
-            .category-menu { width: min(240px, calc(100vw - 40px)); right: 10px; }
+            .site-header .header-top { flex-direction: column; align-items: flex-start; }
+            .site-header nav { width: 100%; }
+            .site-header nav a { flex: 1; text-align: center; }
+            .container { padding: 14px; }
+            .hero { padding: 18px; }
+            .hero h1 { font-size: 1.5rem; }
+            .calculator-tabs { gap: 8px; }
+            .calc-tab { width: 100%; }
+            .buttons, .scientific-grid { gap: 6px; }
+            .btn { padding: 10px; font-size: 0.95rem; }
         }
     </style>
 </head>
@@ -112,117 +87,221 @@
     <div class="header-top">
         <div>
             <p class="title">Calculation Hub</p>
-            <p class="subtitle">Quick finance tools optimized for mobile</p>
-            <div class="category-menu" id="categoryMenu">
-                <button class="category-btn active" onclick="setCategory('Finance', this)">Finance</button>
-                <button class="category-btn" onclick="setCategory('Word Tools', this)">Word Tools</button>
-            </div>
+            <p class="subtitle">Simple and scientific calculators for everyday math</p>
         </div>
-        <div class="header-actions">
-            <button class="category-toggle" aria-expanded="false" onclick="toggleCategoryMenu()"><span></span></button>
-            <button class="nav-toggle" aria-expanded="false" onclick="toggleNav()">☰</button>
-        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="word_counter.html">Word Counter</a>
+            <a href="finance.html">Finance Tools</a>
+        </nav>
     </div>
-    <nav class="nav-menu" aria-label="Mobile navigation">
-        <button class="nav-link active" onclick="switchTab('interest', this); toggleNav(false)">Compound Interest</button>
-        <button class="nav-link" onclick="switchTab('mortgage', this); toggleNav(false)">Mortgage Payment</button>
-        <a class="nav-link" href="word_counter.html">Word Counter</a>
-    </nav>
 </header>
 <div class="container">
-    <h2>📈 Wealth & Finance Calculator Hub</h2>
-    
-    <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab('interest')">Compound Interest</button>
-        <button class="tab-btn" onclick="switchTab('mortgage')">Mortgage Payment</button>
-    </div>
-
-    <!-- COMPOUND INTEREST -->
-    <div id="interest" class="tab-content active">
-        <div class="input-group"><label>Principal Amount ($)</label><input type="number" id="p-amount" value="5000"></div>
-        <div class="input-group"><label>Annual Interest Rate (%)</label><input type="number" id="p-rate" value="7" step="0.1"></div>
-        <div class="input-group"><label>Time Period (Years)</label><input type="number" id="p-years" value="10"></div>
-        <button class="calc-btn" onclick="calcInterest()">Calculate Future Value</button>
-        <div id="interest-res" class="result">Future Balance: $9,835.76</div>
-    </div>
-
-    <!-- AD SLOT POSITION 1 (Keeps users viewing ads while shifting tabs) -->
-    <div class="ad-slot">
-        <!-- calculation-hub-ad -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-1607159692390166"
-            data-ad-slot="7543509719"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <!-- MORTGAGE CALCULATOR -->
-    <div id="mortgage" class="tab-content">
-        <div class="input-group"><label>Home Price ($)</label><input type="number" id="m-price" value="300000"></div>
-        <div class="input-group"><label>Down Payment ($)</label><input type="number" id="m-down" value="60000"></div>
-        <div class="input-group"><label>Interest Rate (%)</label><input type="number" id="m-rate" value="5" step="0.1"></div>
-        <div class="input-group"><label>Loan Term (Years)</label><input type="number" id="m-years" value="30"></div>
-        <button class="calc-btn" onclick="calcMortgage()">Calculate Monthly Payment</button>
-        <div id="mortgage-res" class="result">Monthly Payment: $1,288.37</div>
-    </div>
+    <section class="hero">
+        <div class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep">/</span>
+            <span>Calculators</span>
+        </div>
+        <h1>Free Online Simple Calculator and Scientific Calculator</h1>
+        <p>Use this home page for quick arithmetic, percentages, square roots, powers, factorials, and memory-based calculations. It is designed to be fast, clean, and useful for study, work, or everyday calculations.</p>
+        <div class="calculator-tabs" role="tablist" aria-label="Calculator selector">
+            <button class="calc-tab active" onclick="showCalculator('simple')">Simple Calculator</button>
+            <button class="calc-tab" onclick="showCalculator('scientific')">Scientific Calculator</button>
+        </div>
+        <div id="simple-panel" class="tab-panel active">
+            <div class="card">
+                <h2>Simple Calculator</h2>
+                <input class="display" id="simple-display" value="0" readonly>
+                <div class="buttons">
+                    <button class="btn" onclick="appendValue('7')">7</button>
+                    <button class="btn" onclick="appendValue('8')">8</button>
+                    <button class="btn" onclick="appendValue('9')">9</button>
+                    <button class="btn operator" onclick="appendValue('/')">÷</button>
+                    <button class="btn" onclick="appendValue('4')">4</button>
+                    <button class="btn" onclick="appendValue('5')">5</button>
+                    <button class="btn" onclick="appendValue('6')">6</button>
+                    <button class="btn operator" onclick="appendValue('*')">×</button>
+                    <button class="btn" onclick="appendValue('1')">1</button>
+                    <button class="btn" onclick="appendValue('2')">2</button>
+                    <button class="btn" onclick="appendValue('3')">3</button>
+                    <button class="btn operator" onclick="appendValue('-')">−</button>
+                    <button class="btn clear" onclick="clearSimple()">C</button>
+                    <button class="btn" onclick="appendValue('0')">0</button>
+                    <button class="btn" onclick="appendValue('.')">.</button>
+                    <button class="btn operator" onclick="appendValue('+')">+</button>
+                    <button class="btn equal" onclick="calculateSimple()" style="grid-column: span 4;">=</button>
+                </div>
+            </div>
+        </div>
+        <div id="scientific-panel" class="tab-panel">
+            <div class="card">
+                <h2>Scientific Calculator</h2>
+                <input class="display" id="scientific-display" value="0" readonly>
+                <div class="scientific-grid">
+                    <button class="btn" onclick="appendScientific('7')">7</button>
+                    <button class="btn" onclick="appendScientific('8')">8</button>
+                    <button class="btn" onclick="appendScientific('9')">9</button>
+                    <button class="btn operator" onclick="appendScientific('(')">(</button>
+                    <button class="btn" onclick="appendScientific('4')">4</button>
+                    <button class="btn" onclick="appendScientific('5')">5</button>
+                    <button class="btn" onclick="appendScientific('6')">6</button>
+                    <button class="btn operator" onclick="appendScientific(')')">)</button>
+                    <button class="btn" onclick="appendScientific('1')">1</button>
+                    <button class="btn" onclick="appendScientific('2')">2</button>
+                    <button class="btn" onclick="appendScientific('3')">3</button>
+                    <button class="btn operator" onclick="appendScientific('^')">xʸ</button>
+                    <button class="btn clear" onclick="clearScientific()">C</button>
+                    <button class="btn" onclick="appendScientific('0')">0</button>
+                    <button class="btn operator" onclick="appendScientific('.')">.</button>
+                    <button class="btn operator" onclick="appendScientific('+')">+</button>
+                    <button class="btn" onclick="evaluateScientific('percent')">%</button>
+                    <button class="btn" onclick="evaluateScientific('square')">x²</button>
+                    <button class="btn" onclick="evaluateScientific('cube')">x³</button>
+                    <button class="btn" onclick="evaluateScientific('factorial')">x!</button>
+                    <button class="btn" onclick="evaluateScientific('memory-clear')">MC</button>
+                    <button class="btn" onclick="evaluateScientific('memory-recall')">MR</button>
+                    <button class="btn" onclick="evaluateScientific('memory-add')">M+</button>
+                    <button class="btn" onclick="evaluateScientific('memory-subtract')">M-</button>
+                    <button class="btn" onclick="evaluateScientific('sqrt')">√</button>
+                    <button class="btn" onclick="evaluateScientific('sin')">sin</button>
+                    <button class="btn" onclick="evaluateScientific('cos')">cos</button>
+                    <button class="btn" onclick="evaluateScientific('tan')">tan</button>
+                    <button class="btn" onclick="evaluateScientific('log')">log</button>
+                    <button class="btn" onclick="evaluateScientific('pi')">π</button>
+                    <button class="btn" onclick="evaluateScientific('exp')">e</button>
+                    <button class="btn equal" onclick="calculateScientific()">=</button>
+                </div>
+            </div>
+        </div>
+        <div class="link-row">
+            <a href="word_counter.html">Word Counter</a>
+            <a href="finance.html">Finance Tools</a>
+        </div>
+        <div class="ad-slot">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1607159692390166" data-ad-slot="7543509719" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </section>
 </div>
-
 <script>
-    function switchTab(tabId, source) {
-        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-        document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
-        document.getElementById(tabId).classList.add('active');
-        if (source) source.classList.add('active');
+    const simpleDisplay = document.getElementById('simple-display');
+    const scientificDisplay = document.getElementById('scientific-display');
+    let scientificMemory = 0;
+
+    function showCalculator(type) {
+        document.querySelectorAll('.calc-tab').forEach(btn => btn.classList.toggle('active', btn.textContent.includes(type === 'simple' ? 'Simple' : 'Scientific')));
+        document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+        document.getElementById(type + '-panel').classList.add('active');
     }
-    function toggleNav(forceOpen) {
-        const header = document.querySelector('.site-header');
-        const isOpen = typeof forceOpen === 'boolean' ? forceOpen : !header.classList.contains('expanded');
-        header.classList.toggle('expanded', isOpen);
-        document.querySelector('.nav-toggle').setAttribute('aria-expanded', isOpen);
-    }
-    function setCategory(category, element) {
-        document.querySelectorAll('.category-btn').forEach(btn => btn.classList.toggle('active', btn === element));
-        const subtitle = document.querySelector('.site-header .subtitle');
-        if (category === 'Word Tools') {
-            subtitle.textContent = 'Text utilities and quick calculators';
+
+    function appendValue(value) {
+        const current = simpleDisplay.value;
+        if (current === '0' && value !== '.') {
+            simpleDisplay.value = value;
         } else {
-            subtitle.textContent = 'Quick finance tools optimized for mobile';
+            simpleDisplay.value = current + value;
         }
     }
-    function toggleCategoryMenu(forceOpen) {
-        const menu = document.getElementById('categoryMenu');
-        const toggle = document.querySelector('.category-toggle');
-        const isOpen = typeof forceOpen === 'boolean' ? forceOpen : !menu.classList.contains('expanded');
-        menu.classList.toggle('expanded', isOpen);
-        toggle.setAttribute('aria-expanded', isOpen);
-        toggle.classList.toggle('open', isOpen);
+
+    function clearSimple() {
+        simpleDisplay.value = '0';
     }
-    function calcInterest() {
-        let p = parseFloat(document.getElementById('p-amount').value);
-        let r = parseFloat(document.getElementById('p-rate').value) / 100;
-        let t = parseFloat(document.getElementById('p-years').value);
-        let a = p * Math.pow((1 + r), t);
-        document.getElementById('interest-res').innerText = `Future Balance: $${a.toFixed(2)}`;
+
+    function calculateSimple() {
+        try {
+            simpleDisplay.value = Function('return (' + simpleDisplay.value.replace(/×/g, '*').replace(/÷/g, '/') + ')')();
+        } catch (error) {
+            simpleDisplay.value = 'Error';
+        }
     }
-    function calcMortgage() {
-        let p = parseFloat(document.getElementById('m-price').value) - parseFloat(document.getElementById('m-down').value);
-        let r = (parseFloat(document.getElementById('m-rate').value) / 100) / 12;
-        let n = parseFloat(document.getElementById('m-years').value) * 12;
-        let m = p * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-        document.getElementById('mortgage-res').innerText = `Monthly Payment: $${m.toFixed(2)}`;
+
+    function appendScientific(value) {
+        const current = scientificDisplay.value;
+        if (current === '0' && value !== '.' && value !== '-') {
+            scientificDisplay.value = value;
+        } else {
+            scientificDisplay.value = current + value;
+        }
+    }
+
+    function clearScientific() {
+        scientificDisplay.value = '0';
+    }
+
+    function calculateScientific() {
+        try {
+            const expr = scientificDisplay.value
+                .replace(/π/g, 'Math.PI')
+                .replace(/xʸ/g, '^')
+                .replace(/√/g, 'Math.sqrt')
+                .replace(/sin/g, 'Math.sin')
+                .replace(/cos/g, 'Math.cos')
+                .replace(/tan/g, 'Math.tan')
+                .replace(/log/g, 'Math.log10')
+                .replace(/exp/g, 'Math.exp');
+            scientificDisplay.value = Function('return (' + expr + ')')();
+        } catch (error) {
+            scientificDisplay.value = 'Error';
+        }
+    }
+
+    function evaluateScientific(type) {
+        const currentValue = parseFloat(scientificDisplay.value);
+
+        if (Number.isNaN(currentValue)) {
+            scientificDisplay.value = 'Error';
+            return;
+        }
+
+        if (type === 'sqrt') {
+            scientificDisplay.value = Math.sqrt(currentValue).toString();
+        } else if (type === 'sin') {
+            scientificDisplay.value = Math.sin(currentValue * Math.PI / 180).toString();
+        } else if (type === 'cos') {
+            scientificDisplay.value = Math.cos(currentValue * Math.PI / 180).toString();
+        } else if (type === 'tan') {
+            scientificDisplay.value = Math.tan(currentValue * Math.PI / 180).toString();
+        } else if (type === 'log') {
+            scientificDisplay.value = Math.log10(currentValue).toString();
+        } else if (type === 'pi') {
+            scientificDisplay.value = Math.PI.toString();
+        } else if (type === 'exp') {
+            scientificDisplay.value = Math.E.toString();
+        } else if (type === 'percent') {
+            scientificDisplay.value = (currentValue / 100).toString();
+        } else if (type === 'square') {
+            scientificDisplay.value = Math.pow(currentValue, 2).toString();
+        } else if (type === 'cube') {
+            scientificDisplay.value = Math.pow(currentValue, 3).toString();
+        } else if (type === 'factorial') {
+            if (!Number.isInteger(currentValue) || currentValue < 0) {
+                scientificDisplay.value = 'Error';
+            } else {
+                let result = 1;
+                for (let i = 2; i <= currentValue; i++) result *= i;
+                scientificDisplay.value = result.toString();
+            }
+        } else if (type === 'memory-clear') {
+            scientificMemory = 0;
+            scientificDisplay.value = '0';
+        } else if (type === 'memory-recall') {
+            scientificDisplay.value = scientificMemory.toString();
+        } else if (type === 'memory-add') {
+            scientificMemory += currentValue;
+            scientificDisplay.value = scientificMemory.toString();
+        } else if (type === 'memory-subtract') {
+            scientificMemory -= currentValue;
+            scientificDisplay.value = scientificMemory.toString();
+        }
     }
 </script>
-</div>
 <footer class="site-footer">
-    Built for fast mobile use — find more tools at Calculation Hub.
-    <div class="footer-links">
-        <a href="index.html">Finance Calculator</a>
+    Built for fast everyday math — explore more tools at Calculation Hub.
+    <div>
+        <a href="index.html">Home</a>
         <a href="word_counter.html">Word Counter</a>
+        <a href="finance.html">Finance Tools</a>
     </div>
 </footer>
 </body>
