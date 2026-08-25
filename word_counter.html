@@ -15,6 +15,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Free Word Counter, Character Counter & Text Formatter">
     <meta name="twitter:description" content="A simple online tool for counting words, characters, and paragraphs while formatting text.">
+    <link rel="stylesheet" href="assets/common.css">
+    <link rel="stylesheet" href="assets/word_counter.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -34,51 +36,6 @@
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1607159692390166"
      crossorigin="anonymous"></script>
-    <style>
-        :root { --primary: #4f46e5; --dark: #1f2937; --light: #f3f4f6; }
-        body { font-family: system-ui, sans-serif; background: var(--light); padding: 0; margin: 0; color: #111827; }
-        .site-header { background: var(--dark); color: white; padding: 16px 20px; position: sticky; top: 0; z-index: 20; }
-        .site-header .header-top { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; position: relative; }
-        .site-header .title { margin: 0; font-size: 18px; font-weight: 700; }
-        .site-header .subtitle { margin: 4px 0 0; font-size: 13px; color: #d1d5db; }
-        .site-header .menu-toggle { display: none; border: none; background: transparent; padding: 6px; cursor: pointer; flex-direction: column; gap: 4px; }
-        .site-header .menu-toggle span { display: block; width: 22px; height: 2px; background: white; border-radius: 2px; }
-        .site-header nav { display: flex; gap: 10px; flex-wrap: wrap; }
-        .site-header nav a { color: white; text-decoration: none; padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.1); }
-        .site-header nav a.active { background: rgba(255,255,255,0.2); }
-        .wrapper { width: 100%; max-width: 750px; margin: 24px auto 32px; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; font-size: 0.95rem; color: #64748b; }
-        .breadcrumbs a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        .breadcrumbs .sep { color: #94a3b8; }
-        textarea { width: 100%; height: 180px; padding: 12px; border: 2px solid #e2e8f0; border-radius: 6px; resize: vertical; box-sizing: border-box; font-size: 16px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 15px 0; }
-        .stat-box { background: #eff6ff; padding: 10px; border-radius: 6px; text-align: center; font-weight: bold; color: #1e40af; }
-        .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
-        .btn { padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500; background: var(--primary); color: white; }
-        .btn-danger { background: #ef4444; }
-        .ad-banner { width: 100%; height: 90px; background: #f9fafb; border: 1px solid #d1d5db; display: flex; align-items: center; justify-content: center; color: #9ca3af; font-size: 11px; margin-top: 15px; }
-        .site-footer { background: #111827; color: #d1d5db; text-align: center; padding: 16px 20px; font-size: 14px; }
-        .site-footer a { color: #8be5a2; text-decoration: none; margin: 0 8px; }
-        .seo-content { margin-top: 20px; padding-top: 16px; border-top: 1px solid #e5e7eb; }
-        .tool-intro { margin-bottom: 14px; }
-        .seo-content h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--dark); }
-        .seo-content p, .seo-content li { line-height: 1.7; color: #4b5563; }
-        .seo-content ul { margin: 0; padding-left: 20px; }
-        @media (max-width: 720px) {
-            .wrapper { margin: 16px auto 24px; border-radius: 0; box-shadow: none; }
-            .site-header .header-top { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
-            .site-header .menu-toggle { display: inline-flex; margin-left: auto; align-self: center; position: static; }
-            .site-header nav { display: none; position: absolute; top: calc(100% + 8px); right: 0; left: 0; flex-direction: column; gap: 8px; padding: 10px; background: rgba(31, 41, 55, 0.98); border-radius: 10px; box-shadow: 0 10px 24px rgba(0,0,0,0.25); z-index: 30; }
-            .site-header nav.open { display: flex; }
-            .wrapper { display: flex; flex-direction: column; }
-            .tool-intro { order: 2; }
-            textarea { order: 1; }
-            .stats-grid { order: 3; }
-            .actions { order: 4; }
-            .ad-banner { order: 5; }
-            .seo-content { order: 6; }
-        }
-    </style>
 </head>
 <body>
 <header class="site-header">
