@@ -33,6 +33,7 @@
 }
 .site-header .menu-toggle {
     display: none;
+    width: auto;
     border: none;
     background: transparent;
     padding: 6px;
