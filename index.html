@@ -140,6 +140,14 @@
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1607159692390166" data-ad-slot="7543509719" data-ad-format="auto" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+        <section class="result-card calculator-result active" data-calculator="simple" aria-live="polite" aria-label="Simple calculator result">
+            <h3>Calculation result</h3>
+            <output id="simple-result">0</output>
+        </section>
+        <section class="result-card calculator-result" data-calculator="scientific" aria-live="polite" aria-label="Scientific calculator result">
+            <h3>Calculation result</h3>
+            <output id="scientific-result">0</output>
+        </section>
         <div class="link-row">
             <a href="word_counter.html">Word Counter</a>
             <a href="finance.html">Finance Tools</a>
@@ -149,12 +157,19 @@
 <script>
     const simpleDisplay = document.getElementById('simple-display');
     const scientificDisplay = document.getElementById('scientific-display');
+    const simpleResult = document.getElementById('simple-result');
+    const scientificResult = document.getElementById('scientific-result');
     let scientificMemory = 0;
+
+    function updateResult(display, result) {
+        result.textContent = display.value;
+    }
 
     function showCalculator(type) {
         document.querySelectorAll('.calc-tab').forEach(btn => btn.classList.toggle('active', btn.textContent.includes(type === 'simple' ? 'Simple' : 'Scientific')));
         document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
         document.getElementById(type + '-panel').classList.add('active');
+        document.querySelectorAll('.calculator-result').forEach(result => result.classList.toggle('active', result.dataset.calculator === type));
     }
 
     function toggleMenu() {
@@ -172,6 +187,7 @@
 
     function clearSimple() {
         simpleDisplay.value = '0';
+        updateResult(simpleDisplay, simpleResult);
     }
 
     function calculateSimple() {
@@ -180,6 +196,7 @@
         } catch (error) {
             simpleDisplay.value = 'Error';
         }
+        updateResult(simpleDisplay, simpleResult);
     }
 
     function appendScientific(value) {
@@ -193,6 +210,7 @@
 
     function clearScientific() {
         scientificDisplay.value = '0';
+        updateResult(scientificDisplay, scientificResult);
     }
 
     function calculateScientific() {
@@ -210,6 +228,7 @@
         } catch (error) {
             scientificDisplay.value = 'Error';
         }
+        updateResult(scientificDisplay, scientificResult);
     }
 
     function evaluateScientific(type) {
@@ -217,6 +236,7 @@
 
         if (Number.isNaN(currentValue)) {
             scientificDisplay.value = 'Error';
+            updateResult(scientificDisplay, scientificResult);
             return;
         }
 
@@ -260,6 +280,7 @@
             scientificMemory -= currentValue;
             scientificDisplay.value = scientificMemory.toString();
         }
+        updateResult(scientificDisplay, scientificResult);
     }
 </script>
 <footer class="site-footer">

@@ -20,9 +20,12 @@ button { width: 100%; padding: 12px; background: var(--dark); color: white; bord
 .site-footer a { color: #8be5a2; text-decoration: none; margin: 0 8px; }
 @media (max-width: 720px) {
     .container { padding: 16px; }
-    .tabs { flex-direction: column; }
-    .tab-btn { width: 100%; }
+    .container { display: flex; flex-direction: column; }
+    .tabs { flex-direction: row; gap: 8px; }
+    .tab-btn { flex: 1 1 0; min-width: 0; padding: 12px 8px; }
     .tab-content { order: 2; }
     .tabs { order: 1; }
     .breadcrumbs { order: 0; }
+    .container h1 { order: 3; }
+    .container > p { order: 4; }
 }
